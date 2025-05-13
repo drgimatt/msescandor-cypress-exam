@@ -4,6 +4,7 @@ let UserRegisData = randomRegisData()
 UserRegisData.role = 'user'
 UserRegisData.roleId = 'role-user'
 UserRegisData.expectedRedirect ='/topics'
+
 let MasterRegisData = randomRegisData()
 MasterRegisData.role = 'quiz-master'
 MasterRegisData.roleId = 'role-quiz-master'
@@ -25,6 +26,28 @@ describe('Sprint 1 -  Registration for Quiz Master & Regular User', { testIsolat
     registerButton.should('be.visible').click()
 
     cy.registerUser(MasterRegisData)
+
+  })
+    it('Verify user registration does not work for both Quiz Master and Regular User roles if invalid email address is provided', () => {
+    cy.visit('/')
+
+    let registerButton = cy.get('a[href="/register"]')
+    registerButton.should('have.text', "Register")
+    registerButton.should('be.visible').click()
+    
+    let TempRegisData = UserRegisData
+    TempRegisData.email='----'
+
+    cy.registerUser(TempRegisData)
+
+    registerButton = cy.get('a[href="/register"]')
+    registerButton.should('have.text', "Register")
+    registerButton.should('be.visible').click()
+
+    TempRegisData = MasterRegisData
+    TempRegisData.email='---'
+
+    cy.registerUser(TempRegisData)
 
   })
   it('Verify newly created account can successfully log in and access appropriate URL', () => {

@@ -74,4 +74,5 @@ Cypress.Commands.add('loginUser', (data = null) => {
     } else {
         cy.url().should('contain','/manage-topics')
     }
+    cy.wait(5000)
 })

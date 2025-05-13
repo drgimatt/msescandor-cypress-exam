@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy-quiz" : "npx cypress run --spec 'cypress/e2e/regression-testing/registration.cy.js' --browser chrome"
   },
   "repository": {
     "type": "git",
