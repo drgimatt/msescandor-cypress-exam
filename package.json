@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/drgimatt/msescandor-cypress-exam#readme",
   "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
     "cypress": "^14.3.3"
   }
 }
