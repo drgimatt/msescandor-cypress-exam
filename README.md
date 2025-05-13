@@ -20,7 +20,7 @@ This repository contains sample test automation project that accesses the [Test 
 
 ### Step 2 - Clone the Repository
 
-``` cd ~/Desktop/Cypress-Projects git clone [https://github.com/drgimatt/cypressTest.git](https://github.com/drgimatt/msescandor-cypress-exam.git) ```
+``` cd ~/Desktop/Cypress-Projects git clone https://github.com/drgimatt/msescandor-cypress-exam.git ```
 
 ### Step 3 - Install Dependencies
 
