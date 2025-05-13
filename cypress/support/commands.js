@@ -71,8 +71,10 @@ Cypress.Commands.add('loginUser', (data = null) => {
 
     if(data.role === "user"){
         cy.url().should('contain','/topics')
+        cy.contains('Browse Topics').should('be.visible')
     } else {
         cy.url().should('contain','/manage-topics')
+        cy.contains('Manage Topics').should('be.visible')
     }
     cy.wait(5000)
 })

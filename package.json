@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy-quiz" : "npx cypress run --spec 'cypress/e2e/regression-testing/registration.cy.js' --browser chrome"
+    "cy-quiz": "npx cypress run --spec 'cypress/e2e/regression-testing/registration.cy.js' --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "devDependencies": {
     "@faker-js/faker": "^9.7.0",
     "cypress": "^14.3.3"
+  },
+  "dependencies": {
+    "msescandor-cypress-exam": "file:"
   }
 }
